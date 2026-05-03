@@ -7,6 +7,7 @@ loadEnv();
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL || "";
 const LIVE_SEPOLIA_RPC_URL = SEPOLIA_RPC_URL || "https://1rpc.io/sepolia";
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -35,6 +36,9 @@ const config: HardhatUserConfig = {
       chainId: 11155111,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : []
     }
+  },
+  etherscan: {
+    apiKey: ETHERSCAN_API_KEY
   }
 };
 

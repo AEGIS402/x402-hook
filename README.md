@@ -33,6 +33,18 @@ Deployed demo contracts:
 | Aegis402SwapRouter | `0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8` |
 | MockMerchantReceiver | `0xAd385F9c8640cEf405f6269B132d2bcb0fA8b58c` |
 
+Verified Sepolia source code:
+
+| Contract | Etherscan |
+| --- | --- |
+| Input MockERC20 | https://sepolia.etherscan.io/address/0x7E18Bb46c48fa9af923f841BF050da2E8A215029#code |
+| Payment MockERC20 | https://sepolia.etherscan.io/address/0xB517249EcCf1DcE96179bae820d5fA42124C6287#code |
+| Create2Deployer | https://sepolia.etherscan.io/address/0x57ac905b46054c0Cba68c71770ad849e63317051#code |
+| Aegis402SafeHook | https://sepolia.etherscan.io/address/0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0#code |
+| Aegis402VulnerableHook | https://sepolia.etherscan.io/address/0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0#code |
+| Aegis402SwapRouter | https://sepolia.etherscan.io/address/0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8#code |
+| MockMerchantReceiver | https://sepolia.etherscan.io/address/0xAd385F9c8640cEf405f6269B132d2bcb0fA8b58c#code |
+
 Pool identifiers:
 
 | Pool | Pool ID |
@@ -94,6 +106,14 @@ npm run deploy:sepolia
 ```
 
 The command reads `PRIVATE_KEY` from `.env`. If `SEPOLIA_RPC_URL` is absent, the Hardhat Sepolia network uses `https://1rpc.io/sepolia`.
+
+## Sepolia Etherscan Verification Command
+
+```sh
+npm run verify:sepolia
+```
+
+The command reads `ETHERSCAN_API_KEY` from `.env` and verifies the live Sepolia contracts listed above.
 
 ## Audit Benchmark Notes
 
