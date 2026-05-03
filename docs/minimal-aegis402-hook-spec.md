@@ -6,6 +6,14 @@ The wallet builds a `MinimalPaymentContext` from a mocked x402 `402 Payment Requ
 
 The demo uses the official Sepolia Uniswap v4 `PoolManager` at `0xE03A1074c86CFeDd5C142C4F04F1a1536e203543`. The custom router exists only to expose `msgSender()` to the hook for payer verification.
 
+The live Sepolia contracts are verified on Etherscan:
+
+| Contract | Verified source |
+| --- | --- |
+| Aegis402SafeHook | https://sepolia.etherscan.io/address/0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0#code |
+| Aegis402VulnerableHook | https://sepolia.etherscan.io/address/0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0#code |
+| Aegis402SwapRouter | https://sepolia.etherscan.io/address/0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8#code |
+
 ## Context Fields
 
 - `paymentId`: replay-protection key.

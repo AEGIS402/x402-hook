@@ -21,29 +21,21 @@ Official Uniswap v4 Sepolia contracts:
 | StateView | `0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c` |
 | Quoter | `0x61b3f2011a92d183c7dbadbda940a7555ccf9227` |
 
-Deployed demo contracts:
+Canonical live deployment details are also available in [docs/live-sepolia-deployment.md](docs/live-sepolia-deployment.md).
 
-| Contract | Address |
-| --- | --- |
-| Input MockERC20 | `0x7E18Bb46c48fa9af923f841BF050da2E8A215029` |
-| Payment MockERC20 | `0xB517249EcCf1DcE96179bae820d5fA42124C6287` |
-| Create2Deployer | `0x57ac905b46054c0Cba68c71770ad849e63317051` |
-| Aegis402SafeHook | `0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0` |
-| Aegis402VulnerableHook | `0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0` |
-| Aegis402SwapRouter | `0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8` |
-| MockMerchantReceiver | `0xAd385F9c8640cEf405f6269B132d2bcb0fA8b58c` |
+### Verified Contract Registry
 
-Verified Sepolia source code:
+| Contract | Role | Address | Verified source | Deployment transaction |
+| --- | --- | --- | --- | --- |
+| Input MockERC20 | Demo swap input token | [`0x7E18Bb46c48fa9af923f841BF050da2E8A215029`](https://sepolia.etherscan.io/address/0x7E18Bb46c48fa9af923f841BF050da2E8A215029) | [Code](https://sepolia.etherscan.io/address/0x7E18Bb46c48fa9af923f841BF050da2E8A215029#code) | [`0x367295647290323a03446ccf9f57ca03506e1e0dc1e7ac6683b0fd44be233079`](https://sepolia.etherscan.io/tx/0x367295647290323a03446ccf9f57ca03506e1e0dc1e7ac6683b0fd44be233079) |
+| Payment MockERC20 | x402 payment asset | [`0xB517249EcCf1DcE96179bae820d5fA42124C6287`](https://sepolia.etherscan.io/address/0xB517249EcCf1DcE96179bae820d5fA42124C6287) | [Code](https://sepolia.etherscan.io/address/0xB517249EcCf1DcE96179bae820d5fA42124C6287#code) | [`0x4d66b1cf0794fb67c801bc61c8d478f770805bec0472f3d1c76fc319869da195`](https://sepolia.etherscan.io/tx/0x4d66b1cf0794fb67c801bc61c8d478f770805bec0472f3d1c76fc319869da195) |
+| Create2Deployer | Hook-permission address deployer | [`0x57ac905b46054c0Cba68c71770ad849e63317051`](https://sepolia.etherscan.io/address/0x57ac905b46054c0Cba68c71770ad849e63317051) | [Code](https://sepolia.etherscan.io/address/0x57ac905b46054c0Cba68c71770ad849e63317051#code) | [`0xd138c513ec46153ba87c391c848db3af07e5c4d50e71b1b454a6afc9380ffe25`](https://sepolia.etherscan.io/tx/0xd138c513ec46153ba87c391c848db3af07e5c4d50e71b1b454a6afc9380ffe25) |
+| Aegis402SafeHook | Safe x402-aware Uniswap v4 hook | [`0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0`](https://sepolia.etherscan.io/address/0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0) | [Code](https://sepolia.etherscan.io/address/0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0#code) | [`0x1eea6b4672d71d7b48dc7e491b28d934ea6f05a20a58b86095831d480ca08503`](https://sepolia.etherscan.io/tx/0x1eea6b4672d71d7b48dc7e491b28d934ea6f05a20a58b86095831d480ca08503) |
+| Aegis402VulnerableHook | Intentionally vulnerable audit benchmark hook | [`0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0`](https://sepolia.etherscan.io/address/0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0) | [Code](https://sepolia.etherscan.io/address/0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0#code) | [`0x19d5bb54a1028f68b208a96f4007d060241480fb2d16f1bd6236a69cdc8ae612`](https://sepolia.etherscan.io/tx/0x19d5bb54a1028f68b208a96f4007d060241480fb2d16f1bd6236a69cdc8ae612) |
+| Aegis402SwapRouter | Minimal router exposing `msgSender()` to hooks | [`0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8`](https://sepolia.etherscan.io/address/0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8) | [Code](https://sepolia.etherscan.io/address/0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8#code) | [`0x8657d1fe2f521ac0ee1783f774f171e38fd9fe4a4bc37b9ccb94e613a52dc5c3`](https://sepolia.etherscan.io/tx/0x8657d1fe2f521ac0ee1783f774f171e38fd9fe4a4bc37b9ccb94e613a52dc5c3) |
+| MockMerchantReceiver | Callback observer for the vulnerable scenario | [`0xAd385F9c8640cEf405f6269B132d2bcb0fA8b58c`](https://sepolia.etherscan.io/address/0xAd385F9c8640cEf405f6269B132d2bcb0fA8b58c) | [Code](https://sepolia.etherscan.io/address/0xAd385F9c8640cEf405f6269B132d2bcb0fA8b58c#code) | [`0x17edd38ff333bd5275c2395ea21474b5da2299ce2ce0c3233cbf77bbf56be5dc`](https://sepolia.etherscan.io/tx/0x17edd38ff333bd5275c2395ea21474b5da2299ce2ce0c3233cbf77bbf56be5dc) |
 
-| Contract | Etherscan |
-| --- | --- |
-| Input MockERC20 | https://sepolia.etherscan.io/address/0x7E18Bb46c48fa9af923f841BF050da2E8A215029#code |
-| Payment MockERC20 | https://sepolia.etherscan.io/address/0xB517249EcCf1DcE96179bae820d5fA42124C6287#code |
-| Create2Deployer | https://sepolia.etherscan.io/address/0x57ac905b46054c0Cba68c71770ad849e63317051#code |
-| Aegis402SafeHook | https://sepolia.etherscan.io/address/0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0#code |
-| Aegis402VulnerableHook | https://sepolia.etherscan.io/address/0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0#code |
-| Aegis402SwapRouter | https://sepolia.etherscan.io/address/0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8#code |
-| MockMerchantReceiver | https://sepolia.etherscan.io/address/0xAd385F9c8640cEf405f6269B132d2bcb0fA8b58c#code |
+The hook addresses end in `0xC0`, which encodes Uniswap v4 `beforeSwap` and `afterSwap` permissions.
 
 Pool identifiers:
 

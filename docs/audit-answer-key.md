@@ -2,6 +2,14 @@
 
 `Aegis402VulnerableHook` is intentionally unsafe and must not be deployed outside a fork or local audit benchmark.
 
+Live verified benchmark targets:
+
+| Contract | Verified source |
+| --- | --- |
+| SafeHook control target | https://sepolia.etherscan.io/address/0xc4680Ab74eB4a4F7379016aa7b6044380Ae4C0C0#code |
+| VulnerableHook audit target | https://sepolia.etherscan.io/address/0x70fAA067bE47D8dc839088Dcfc6f9338c07c80C0#code |
+| Demo router | https://sepolia.etherscan.io/address/0x4DbDe978D7110728a8E248a18ce4D8Ee20E258E8#code |
+
 Expected findings:
 
 - V-01 Missing access control: `setGuardSigner`, `setAdmin`, `setTrustedRouter`, and `setFeeBps` are unrestricted.
